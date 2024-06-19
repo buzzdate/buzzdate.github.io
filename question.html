@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuzzyBuzz</title>
+    <link rel="stylesheet" href="question.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="containerr">
+        <a href="index.html" class="logo"><img src="logo.png" alt="Buzz Logo" /></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-menu">
+          <li><a href="https://toxicf1sh.github.io">Date?</a></li>
+          <li><a href="https://t0xicf1sh.github.io/">Rate your profile</a></li>
+          <li><a href="papertoilet.com">Toilet Paper</a></li>
+          <li><a href="https://burymewithmymoney.com">Money</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Threads Dating Profile</h1>
+      <form id="profileForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" required></textarea>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Nonbinary">Nonbinary</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height" required />
+
+        <label for="languages">Languages:</label>
+        <input type="text" id="languages" name="languages" required />
+
+
+        <label for="exercise">Exercise:</label>
+        <select id="exercise" name="exercise" required>
+          <option value="Active">Active</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Almost never">Almost never</option>
+          <option value="Never">Never</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="education">Education Level:</label>
+        <select id="education" name="education" required>
+          <option value="Sixth form">Sixth form</option>
+          <option value="Technical college">Technical college</option>
+          <option value="Studying their undergrad">
+            Studying their undergrad
+          </option>
+          <option value="Has an undergrad degree">
+            Has an undergrad degree
+          </option>
+          <option value="Studying their postgrad">
+            Studying their postgrad
+          </option>
+          <option value="Has a postgrad">Has a postgrad</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="drinking">Drinking:</label>
+        <select id="drinking" name="drinking" required>
+          <option value="Yes, I drink">Yes, I drink</option>
+          <option value="I drink sometimes">I drink sometimes</option>
+          <option value="I rarely drink">I rarely drink</option>
+          <option value="No, I don’t drink">No, I don’t drink</option>
+          <option value="I'm sober">I'm sober</option>
+          <option value="Never">Never</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="smoking">Smoking:</label>
+        <select id="smoking" name="smoking" required>
+          <option value="I smoke sometimes">I smoke sometimes</option>
+          <option value="No, I don’t smoke">No, I don’t smoke</option>
+          <option value="Yes, I smoke">Yes, I smoke</option>
+          <option value="I'm trying to quit">I'm trying to quit</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="cannabis">Cannabis:</label>
+        <select id="cannabis" name="cannabis" required>
+          <option value="Frequently">Frequently</option>
+          <option value="Never">Never</option>
+          <option value="Socially">Socially</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="lookingFor">Looking for:</label>
+        <select id="lookingFor" name="lookingFor" required>
+          <option value="A long-term relationship">
+            A long-term relationship
+          </option>
+          <option value="Fun, casual dates">Fun, casual dates</option>
+          <option value="Marriage">Marriage</option>
+          <option value="Intimacy, without commitment">
+            Intimacy, without commitment
+          </option>
+          <option value="A life partner">A life partner</option>
+          <option value="Ethical non-monogamy">Ethical non-monogamy</option>
+        </select>
+
+        <label for="starSign">Star sign:</label>
+        <select id="starSign" name="starSign" required>
+          <option value="Aries">Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Gemini">Gemini</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Leo">Leo</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Aquarius">Aquarius</option>
+          <option value="Pisces">Pisces</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="interest"
+          >Which one of your interests do you love most?</label
+        >
+        <select id="interest" name="interest" required>
+          <option value="Art">Art</option>
+          <option value="Cooking">Cooking</option>
+          <option value="Wine">Wine</option>
+          <option value="Time offline">Time offline</option>
+          <option value="Sex positivity">Sex positivity</option>
+          <option value="Skip">Skip</option>
+        </select>
+
+        <label for="profilePicture">Upload Picture:</label>
+        <input
+          type="file"
+          id="profilePicture"
+          name="profilePicture"
+          accept="image/*"
+          required
+        />
+
+        <button type="submit">Generate Profile</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <footer>
+      <footer>
+        <p>
+          Designed with ❤️ by
+          <a
+            href="https://www.threads.net/@toxicf1sh"
+            target="_blank"
+            id="footer-link"
+            >ToxicF1sh</a
+          >
+        </p>
+      </footer>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
